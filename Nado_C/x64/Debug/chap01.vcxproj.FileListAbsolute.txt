@@ -1,1 +1,2 @@
 C:\Users\khsls\studyC\chap01\x64\Debug\NadoC_Review.exe
+C:\Users\khsls\C\Nado_C\x64\Debug\NadoC_Review.exe

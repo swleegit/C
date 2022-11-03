@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_repeat(void)
 {
 	//++a 행에서 우선순위로 a = a + 1을 실행한 다음 진행 
 	//a++ 행에서 마지막으로 a = a + 1을 실행
@@ -78,4 +78,6 @@ int main(void)
 		}
 		printf("\n");
 	}
+
+
 }
