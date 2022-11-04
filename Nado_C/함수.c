@@ -9,7 +9,7 @@
 int sum(int num_1, int num_2); //return의 자료형이 int이고 int 자료형인 두개의 매개변수, 함수이름은 sum
 int sum_1(int num_1, int num_2); //sum(2,3)의 결과를 받아서 추가적으로 합함
 void words(void); //return도 없고 매개변수도 없음.
-int main(void)
+int main_func(void)
 {
 	words(); //리턴값과 매개변수가 없는 함수를 호출함.
 	int num_1 = 0, num_2 = 0;
