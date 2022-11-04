@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h> //전처리 지시자
 
-int main(void)
+int main_condition(void)
 {
 	///*
 	//예제)
@@ -249,7 +249,48 @@ int main(void)
 			 
 		}
 	}
+	/*switch, case
+	(:)과 (;)을 잘 구분해야한다.
+	switch(i)
+	{
+		case 0 : 실행문 ; break ; -->i가 0인경우 실행문 실행, break 없으면 아래 case는 따지지 않고 모두 실행됨.
+	}*/
+
 	
+	srand(time(NULL)); //난수 초기화
+	int i = rand() % 3; // 0,1,2중 임의 수를 받음 
+
+	switch (i)
+	{
+		case 0: printf("가위\n"); break;
+		case 1: printf("바위\n"); break;
+		case 2: printf("보\n"); break;
+		default: printf("몰라요\n"); break; //위에 있는 case 구문 중 어느 하나도 실행되지 않은 경우 실행됨
+	}
+
+	//나이 구분 switch case
+	//몇 살이에요? 
+	//8-13 : 초등학생
+	//14-16 : 중학생
+	//17-19 : 고등학생
+	//그 이외: 학생이 아닙니다.
+	
+	int age_1 = 0;
+	printf("몇살이에요? : \n");
+	scanf_s("%d", &age_1);
+	
+	switch (age_1)
+	{
+	case 8: //실행문 없으면 8일 경우 아무것도 실행하지 않는 다는 것 
+	case 9:
+	case 10:
+	case 11:
+	case 12:
+	case 13: printf("초등학생\n"); break; //case 어느 하나 맞으면 아래 case 실행문 모두 실행 , break 만나기 전까지
+	default: printf("아무것도 아니다!\n");
+	}
+
+
 		
 
 
