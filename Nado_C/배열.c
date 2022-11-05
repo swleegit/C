@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_arr(void)
 {
 	//배열: 같은 자료형의 여러개의 변수를 동시에 생성함.
 	//자료형 변수이름[개수] 방식으로 선언한다.
@@ -58,6 +58,62 @@ int main(void)
 	}
 
 	//char 1개 : 1byte, 영어 한글자 : 1byte, 한글 한글자 : 2byte
+	char kor[] = "나도코딩";
+	printf("%s\n", kor);
+	printf("%d\n", sizeof(kor));
+
+	//sizeof
+	int i = 8; //i라는 변수의 자료형의 크기는 int로 4바이트
+	printf("%d\n", sizeof(i)); //결과는 4
+
+	//예제) 이름이 뭐에요?_ name[]
+	char name[] = "name"; //여기서 name배열의 크기는 5바이트로 결정됨. 따라서 5바이트 이상의 값은 대입못함
+	printf("이름이 뭐에요? : ");
+	scanf_s("%s", name, sizeof(name)); //문자열 scanf_s사용시 반드시 sizeof 있어야한다
+	printf("%s씨 안녕하세요!\n", name);
+
+	//예제) 이름이 뭐에요? _ name[250]
+	char name_re[250] = "name";
+	printf("이름이 뭐에요? : ");
+	scanf_s("%s", name_re, sizeof(name_re));
+	printf("%s씨 안녕하세요!\n", name_re); //5바이트보다 큰 문자열을 대입해도 정상적으로 출력됨 
+
+	//비교)
+	char name_1[255] = "name";
+	printf("%s\n", name_1); //name의 주소가 아니라 name배열에 들어있는 값 전체 출력
+	printf("%c\n", name_1[20]); //문자열에서 대입되지 않는 인덱스는 null이 대입된다.
+	
+	//비교)
+	int number[255] = { 0,1,2,3 };
+	printf("%d\n", number); //알 수 없는 숫자가 출력된다. number배열의 주소
+	printf("%d\n", number[6]); //숫자에서는 대입되지 않는 인덱스는 0이 대입됨.
+
+	//(signed)char : 8bit, -128 ~ 127 총 255개
+	//unsigned char : 8bit, 0 ~ 255
+
+	char num_char = 129; //signed char에 129 대입 : 범위를 넘어감 
+	printf("%d\n", num_char); // 이상한 숫자 나옴.
+	printf("%c\n", num_char); // %c는 0~127에 해당하는 문자만 가능함.
+
+	unsigned char num_char_1 = 253;
+	printf("%d\n", num_char_1); //253 출력됨. 즉 자료형을 나타내는 것은 단순히 '크기'임.
+								//char을 숫자에 사용해도 틀린것은 아님. 단지 그 숫자의 범위가 작아 제한이 많음.
+	
+	//아스키코드(ASCII) : ANSI(미국표준협회)에서 제시한 표준 코드 체계
+	//7bit 총 128개 코드 0 ~ 127(십진법 아스키코드값)
+
+	printf("문자와 아스키코드값\n");
+	for (int i = 0; i < 128; i++)
+	{
+		printf("%c : %d\n", i, i); //%c, 숫자 1에 해당하는 문자, 즉 대입된 값을 어떻게 변환하느냐에 따라 출력이 다름
+	}
+
+
+
+
+
+	
+
 
 
 
