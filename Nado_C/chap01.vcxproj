@@ -129,6 +129,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="practice.c" />
+    <ClCompile Include="구조체.c" />
+    <ClCompile Include="다차원배열.c" />
     <ClCompile Include="반복문.c" />
     <ClCompile Include="배열.c" />
     <ClCompile Include="자료형_scanf.c">
@@ -137,6 +139,7 @@
     <ClCompile Include="조건문.c" />
     <ClCompile Include="포인터.c" />
     <ClCompile Include="함수.c" />
+    <ClCompile Include="함수와포인터.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,5 +36,14 @@
     <ClCompile Include="포인터.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="함수와포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="다차원배열.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구조체.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_pointer(void)
 {
 	//주소 &
 	int 철수 = 1; //int형(4바이트)크기로 메모리에 공간을 만들고 그 공간을 철수라 이름 붙이고, 1을 할당함.
@@ -128,8 +128,28 @@ int main(void)
 	//포인터와 별개로 배열에서 각 원소에 접근하는 다른 문법
 	//*(arr + i) = arr[i]완전 동일한 표현, 포인터가 아닌 배열에서도, 포인터인 배열에서도 사용가능함.
 
-	printf("%d = %d", *(array + 1), array[1]);
+	printf("%d = %d\n", *(array + 1), array[1]);
+	printf("%d = '%d\n", *array, array[0]); //0번째 인덱스는 *(array + 0)이 아니다.
+	//*로 표기하는 것은 포인터와는 무관하고 다른 변수가 아닌 배열형식에서만 가능하다.
+	//*이라는 것은 그 값(=할당된 값)을 의미한다.
+	//*&을 같이 사용하는 것은 그 주소에 할당된 값이므로 없는 것과 마찬가지다.
+
+	printf("%d = %d = %d\n", *array, array[0], *&array[0]); // *array[0] 이거는 이중이여서 틀린 문법
+	// *해당 할당된 값에 접근한다.
+
+	char cod[7] = "coding";
+	printf("%d\n", cod);
+	printf("%d\n", &cod);
+	printf("%d\n", &cod[0]);
+	printf("%d\n", *cod);
+	printf("%d\n", *(cod + 0)); //위에랑 같은 의미
+	printf("%c\n", *cod);
+	//printf("%s\n", *cod); 제어문자, 가능한 해석인 경우만 가능함. *cod는 c로 아스키코드 실수값 또는 문자만 가능함. 문자열은 불가능
 
 
+
+
+	
+	
 	
 }
